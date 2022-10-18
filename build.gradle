@@ -1,6 +1,13 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'http://artefac01adl.claro.amx:8081/artifactory/gradle-virtual'
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
         
     }
     dependencies {
